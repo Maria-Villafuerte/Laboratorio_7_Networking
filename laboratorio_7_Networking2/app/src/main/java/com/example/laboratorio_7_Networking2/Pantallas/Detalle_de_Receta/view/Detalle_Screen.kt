@@ -1,6 +1,7 @@
 package com.example.laboratorio_7_networking.Pantallas.Detalle_de_Receta.view
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
@@ -28,7 +29,16 @@ fun detalle_de_receta(navController: NavController = rememberNavController()) {
             item(span = { GridItemSpan(maxLineSpan) }){
                 Text(text = "Detalle pato", fontSize = 18.sp,
                     modifier = Modifier.padding(start = 20.dp, bottom = 5.dp))
+
             }
+            item {
+                Row() {
+                Text(text = "Detalle Gallina", fontSize = 18.sp,
+                    modifier = Modifier.padding(start = 20.dp, bottom = 5.dp))
+                Text(text = "Detalle perro", fontSize = 18.sp,
+                    modifier = Modifier.padding(start = 20.dp, bottom = 5.dp))
+
+            } }
         }
     }
 }

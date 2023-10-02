@@ -29,6 +29,18 @@ fun filtrado_por_catogoria(navController: NavController = rememberNavController(
                 Text(text = "Filtrado", fontSize = 18.sp,
                     modifier = Modifier.padding(start = 20.dp, bottom = 5.dp))
             }
+            item(span = { GridItemSpan(maxLineSpan) }){
+                Text(text = "Filtrado", fontSize = 18.sp,
+                    modifier = Modifier.padding(start = 20.dp, bottom = 5.dp))
+            }
+            item(span = { GridItemSpan(maxLineSpan) }){
+                Text(text = "Filtrado", fontSize = 18.sp,
+                    modifier = Modifier.padding(start = 20.dp, bottom = 5.dp))
+            }
+            item(span = { GridItemSpan(maxLineSpan) }){
+                Text(text = "Filtrado", fontSize = 18.sp,
+                    modifier = Modifier.padding(start = 20.dp, bottom = 5.dp))
+            }
         }
     }
 }
