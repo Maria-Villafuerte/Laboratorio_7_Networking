@@ -2,9 +2,11 @@ package com.example.laboratorio_7_Networking2.Navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.laboratorio_7_networking.Pantallas.Detalle_de_Receta.view.detalle_de_receta
 import com.example.laboratorio_7_networking.Pantallas.Filtrado_por_Categorias.view.filtrado_por_catogoria
 import com.example.laboratorio_7_networking.Pantallas.Listado_de_Categorias.view.listado_de_categorias
@@ -18,8 +20,8 @@ fun Navigation_confi(navController: NavController) {
         composable(route = NavigationState.detalles.route) {
             detalle_de_receta(navController)
         }
-        composable(route = NavigationState.filtrado.route) {
-            filtrado_por_catogoria(navController)
+        composable(route = NavigationState.detalles.route) {
+            detalle_de_receta(navController)
         }
         composable(route = NavigationState.listado.route) {
             listado_de_categorias(navController)

@@ -1,10 +1,12 @@
 package com.example.laboratorio_7_Networking2.Pantallas.Listado_de_Categorias.repository
 
 import com.example.laboratorio_7_Networking2.Networking.MealsWebService
+import com.example.laboratorio_7_Networking2.Networking.Response.MealListResponse
 import com.example.laboratorio_7_Networking2.Networking.Response.MealsCategoriesResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class MealsRepository(private val webService: MealsWebService = MealsWebService()) {
     fun getMeals(successCallback: (response: MealsCategoriesResponse?) -> Unit) {

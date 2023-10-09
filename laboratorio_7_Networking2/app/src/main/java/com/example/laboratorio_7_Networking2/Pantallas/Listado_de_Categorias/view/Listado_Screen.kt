@@ -1,6 +1,9 @@
 package com.example.laboratorio_7_networking.Pantallas.Listado_de_Categorias.view
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -23,6 +26,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.laboratorio_7_Networking2.Networking.Response.MealResponse
 import com.example.laboratorio_7_Networking2.Pantallas.Listado_de_Categorias.viewmodel.MealsCategoriesViewModel
 import com.example.laboratorio_7_Networking2.ui.theme.Laboratorio_7_Networking21Theme
+import com.example.laboratorio_7_networking.Pantallas.Filtrado_por_Categorias.view.filtrado_por_catogoria
 import com.example.story_laboratorio6_navegacion.Navigation.AppBar
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -40,7 +44,13 @@ fun listado_de_categorias(navController: NavController = rememberNavController()
         AppBar(title = "Recetas Listado", navController = navController)
         LazyColumn {
             items(rememberedMeals.value) { meal ->
-                Text(text = meal.name)
+                Row() {
+                    Text(text = meal.name,
+                    modifier = Modifier .padding(end = 30.dp))
+                    Text(text = meal.id)
+
+                }
+
             }
         }
     }
